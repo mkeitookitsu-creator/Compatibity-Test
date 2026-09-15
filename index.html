@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI × 64ラブタイプグループ相性診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MBTI × 64ラブタイプグループ相性診断</h1>
+    <p class="subtitle">1,024通りの個人属性 × 全ペア総当たり分析（2〜10人用）</p>
+
+    <div class="card">
+      <h2>👤 メンバー登録 (<span id="member-count">0</span>/10人)</h2>
+      <div id="members-list"></div>
+      <button id="add-member-btn" class="btn btn-secondary">+ メンバーを追加する</button>
+    </div>
+
+    <div class="card score-card">
+      <div class="score-label">GROUP COMPATIBILITY SCORE</div>
+      <div id="total-score" class="score-value">0%</div>
+      <div id="status-text" class="status-text">分析中...</div>
+    </div>
+
+    <div class="card">
+      <h2>👑 1,024通り 個別プロファイル</h2>
+      <div id="profiles-container"></div>
+    </div>
+
+    <div class="card">
+      <h2>💖 ペア全通りの相性・化学反応一覧</h2>
+      <div id="pair-results"></div>
+    </div>
+
+    <button id="reset-btn" class="btn btn-outline">🔄 メンバーを変えて再診断する</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
