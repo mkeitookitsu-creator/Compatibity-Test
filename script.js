@@ -19,8 +19,7 @@ const LOVE_TYPES = [
   "最後の恋人"
 ];
 
-
-// あなたのGemini API Key
+// あなたのGemini API Key（新しいキーに更新済み）
 const GEMINI_API_KEY = "AQ.Ab8RN6JTnQo5BM9kMtUz-JA4iZ69FDGCJy7fj0rbcTj2aPYpsA";
 
 let memberCount = 0;
@@ -127,7 +126,7 @@ async function runAiDiagnosis() {
   diagnoseBtn.textContent = '🤖 AIが関係性を深く分析中...';
   document.getElementById('pair-results').innerHTML = '<p style="font-size: 12px; color: #f472b6;">AIが分析中です。数秒お待ちください...</p>';
 
-    // 人数に応じた出力指示の分岐
+  // 人数に応じた出力指示の分岐
   const dynamicInstruction = isGroup 
     ? `【重要：3人以上のグループ診断】
 ペアごとの相性分析は行わないでください。その分「グループ全体の化学反応・相性分析」「グループの空気感や会話のノリ」「グループ内の力関係」を非常に詳しく、ボリューミーに分析してください。
@@ -164,7 +163,6 @@ async function runAiDiagnosis() {
 
 6. 🛑 2人が関係を長続きさせるための絶対ルール`;
 
-
   const prompt = `
 以下のメンバー情報をもとに相性診断を行ってください。
 
@@ -178,7 +176,8 @@ ${dynamicInstruction}
 `;
 
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${GEMINI_API_KEY}`;
+    // 安定性の高い gemini-1.5-flash モデルに変更
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
     
     const response = await fetch(url, {
       method: "POST",
