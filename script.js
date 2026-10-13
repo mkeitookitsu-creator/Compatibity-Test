@@ -21,7 +21,7 @@ const LOVE_TYPES = [
 
 
 // あなたのGemini API Key
-const GEMINI_API_KEY = "AQ.Ab8RN6I2oZVsaFtia1AyD6vn_IVNAitMheOfvU-1Bksv9ueLxw";
+const GEMINI_API_KEY = "AQ.Ab8RN6JTnQo5BM9kMtUz-JA4iZ69FDGCJy7fj0rbcTj2aPYpsA";
 
 let memberCount = 0;
 
